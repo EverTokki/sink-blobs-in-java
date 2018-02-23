@@ -18,9 +18,13 @@ public class SBubbles {
      */
 
     //EFFECTS: Creates empty list of bubbles
-    public SBubbles(){
+    public SBubbles() {
         bubble = new ArrayList<Bubble>();
         setUp();
+    }
+
+    public void update() {
+        bubble.move();
     }
 
     public void keyPressed(int keyCode) {
@@ -34,8 +38,8 @@ public class SBubbles {
             bubbleControl(keyCode);
     }
 
-    public boolean isOver() {
-        return isGameOver;
+    public Bubble getBubble() {
+        return bubble;
     }
 
     public int getNumBubbles() {
@@ -43,10 +47,9 @@ public class SBubbles {
     }
 
     private void bubbleControl(int keyCode) {
-        if (keyCode == KeyEvent.VK_B){
+        if (keyCode == KeyEvent.VK_B) {
             Bubble.addBubble();
-        }
-        else if (keyCode == KeyEvent.VK_S){
+        } else if (keyCode == KeyEvent.VK_S) {
             Bubble.addSolid();
         }
     }

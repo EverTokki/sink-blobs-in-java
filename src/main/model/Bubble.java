@@ -11,34 +11,31 @@ public class Bubble {
 
     public static final int DIAMETER = 15;
     public static final int DY = 15;
-    public static final int X_POS = SBubbles.HEIGHT/2;
+    public static final int X_POS = SBubbles.HEIGHT / 2;
     public static final Color COLOR = new Color(250, 128, 20);
 
     private int y;
 
     // EFFECT: Places bubble at position(X_POS, y)
-    public Bubble(int y){
+    public Bubble(int y) {
         this.y = y;
     }
 
-    public int getY(){
+    public int getY() {
         return y;
     }
 
     // EFFECT: Moves bubble
-    public void move(){
-    y = y - DY;
-    handleBoundary();
+    public void move() {
+        y = y - DY;
+        handleBoundary();
     }
 
     //EFFECT: Makes sure the bubbles dont go below
     private void handleBoundary() {
-        if(this.y<=SBubbles.HEIGHT) {
+        if (this.y <= SBubbles.HEIGHT) {
             this.y = SBubbles.HEIGHT;
         }
-    }
-
-    public static void tick() {
     }
 
     public static void addBubble() {
@@ -48,7 +45,8 @@ public class Bubble {
     }
 
 
-    public int size() {
+    public static int size() {
         return Bubble.size();
     }
+
 }
