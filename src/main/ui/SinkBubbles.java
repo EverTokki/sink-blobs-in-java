@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+@SuppressWarnings("serial")
 public class SinkBubbles extends JFrame {
 
     private static final int INTERVAL = 20;
@@ -37,9 +38,9 @@ public class SinkBubbles extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 bubbles.update();
                 ap.repaint();
-            });
-        }
-                t.start();
+            }
+        });
+        t.start();
     }
 
     private void centreOnScreen() {

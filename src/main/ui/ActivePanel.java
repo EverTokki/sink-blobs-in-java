@@ -11,7 +11,7 @@ public class ActivePanel extends JPanel {
 
     //sets backpanel
     public ActivePanel(SBubbles b) {
-        setPreferredSize(new Dimension(SBubbles));
+        setPreferredSize(new Dimension(SBubbles.WIDTH, SBubbles.HEIGHT));
         setBackground(Color.GRAY);
         this.bubble = b;
     }
@@ -36,9 +36,4 @@ public class ActivePanel extends JPanel {
         g.setColor(savedCol);
     }
 
-    // EFFECTS:  centres the string str horizontally onto g at vertical position yPos
-    private void centreString(String str, Graphics g, FontMetrics fm, int yPos) {
-        int width = fm.stringWidth(str);
-        g.drawString(str, (SBubbles.WIDTH - width) / 2, yPos);
-    }
 }

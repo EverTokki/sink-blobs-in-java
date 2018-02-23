@@ -12,7 +12,7 @@ public class Bubble {
     public static final int DIAMETER = 15;
     public static final int DY = 15;
     public static final int X_POS = SBubbles.HEIGHT / 2;
-    public static final Color COLOR = new Color(250, 128, 20);
+    public static final Color COLOR = new Color(255, 255, 255);
 
     private int y;
 
@@ -39,6 +39,7 @@ public class Bubble {
     }
 
     public static void addBubble() {
+
     }
 
     public static void addSolid() {
