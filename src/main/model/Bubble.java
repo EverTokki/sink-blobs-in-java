@@ -33,7 +33,9 @@ public class Bubble {
 
     //EFFECT: Makes sure the bubbles dont go below
     private void handleBoundary() {
-
+        if(this.y<=SBubbles.HEIGHT) {
+            this.y = SBubbles.HEIGHT;
+        }
     }
 
     public static void tick() {

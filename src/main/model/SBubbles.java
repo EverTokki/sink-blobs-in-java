@@ -23,15 +23,9 @@ public class SBubbles {
         setUp();
     }
 
-    //EFFECTS: Updates bubbles
-    public void update(){
-        Bubble.move();
-
-    }
-
     public void keyPressed(int keyCode) {
         if (keyCode == KeyEvent.VK_SPACE)
-            Bubble.tick();
+            bubble.move();
         else if (keyCode == KeyEvent.VK_R && isGameOver)
             setUp();
         else if (keyCode == KeyEvent.VK_X)
